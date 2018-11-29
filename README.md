@@ -1,6 +1,8 @@
-# Project Title
+# GtkBox Convertor from celsius to Fahrenheit
 
 One Paragraph of project description goes here
+
+![foto](ScreenShots/Screenshot1.png)
 
 ## Getting Started
 

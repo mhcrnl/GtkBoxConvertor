@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1543037805 source:/home/mhcrnl/Desktop/2018Noe17/GtkBoxConvertor/main.c
+1543509264 source:/home/mhcrnl/Desktop/2018Noe17/GtkBoxConvertor/main.c
 	<stdlib.h>
 	<gtk/gtk.h>
 
@@ -2550,4 +2550,10 @@
 
 1521865377 /usr/include/gtk-2.0/gtk/gtktipsquery.h
 	<gtk/gtk.h>
+
+1543508446 /home/mhcrnl/Desktop/2018Noe17/GtkBoxConvertor/on_help_about.h
+	<gtk/gtk.h>
+
+1543509295 source:/home/mhcrnl/Desktop/2018Noe17/GtkBoxConvertor/on_help_about.c
+	"on_help_about.h"
 

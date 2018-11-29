@@ -38,6 +38,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="on_help_about.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="on_help_about.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

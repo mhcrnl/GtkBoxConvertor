@@ -1,15 +1,19 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
+//#include "on_help_about.h"
+
 #define max 30
 /*
 *   GLOBAL VARIABLES
 */
 const gchar *title = "GtkBox Convertor Cels To Fahr";
-const gchar *author = "Mihai Cornel mhcrnl@gmail.com";
+const gchar *authors[] = {"Mihai Cornel mhcrnl@gmail.com", NULL,};
 const gchar *date  = "24 noe 2018";
 const gchar *version = "0.01";
+const gchar *license = "GPL3v";
 
+//#include "on_help_about.h"
 GtkWidget *en_fahr = NULL;
 /*
 *   FUNCTIONS
@@ -36,6 +40,16 @@ static void helloWorld (GtkWidget *wid, GtkWidget *win)
   gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_destroy (dialog);
 }
+
+void help_about(void)
+{
+	GtkWidget * about_dialog = gtk_about_dialog_new();
+	gtk_about_dialog_set_authors(GTK_ABOUT_DIALOG(about_dialog), authors);
+	gtk_about_dialog_set_license(GTK_ABOUT_DIALOG(about_dialog), license);
+	gtk_dialog_run(GTK_DIALOG(about_dialog));
+	gtk_widget_destroy(about_dialog);
+}
+
 
 int main (int argc, char *argv[])
 {
@@ -83,7 +97,7 @@ int main (int argc, char *argv[])
   gtk_container_add(GTK_CONTAINER(hbox), en_cels);
 
   button = gtk_button_new_from_stock (GTK_STOCK_DIALOG_INFO);
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (helloWorld), (gpointer) win);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (help_about), NULL);
   gtk_box_pack_start (GTK_BOX (hbox), button, TRUE, TRUE, 0);
 
   hbox1 = gtk_hbox_new(TRUE,6);
